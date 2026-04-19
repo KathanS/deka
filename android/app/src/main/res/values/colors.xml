@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#050810</color>
+    <color name="surface">#0D1117</color>
+    <color name="card_background">#111827</color>
+    <color name="accent_green">#00F5A0</color>
+    <color name="accent_cyan">#00D9F5</color>
+    <color name="accent_amber">#F59E0B</color>
+    <color name="accent_rose">#F43F5E</color>
+    <color name="text_primary">#E2E8F0</color>
+    <color name="text_muted">#6B7280</color>
+</resources>

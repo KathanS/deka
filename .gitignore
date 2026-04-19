@@ -1,0 +1,57 @@
+# Android
+*.apk
+*.aab
+*.dex
+*.class
+*.iml
+.gradle/
+build/
+local.properties
+captures/
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+*.egg
+venv/
+.env
+
+# Node
+node_modules/
+web/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Screenshots & temp files
+*.png
+*.jpg
+*.jpeg
+*.mp4
+!demo.mp4
+!demo.gif
+*.xml
+!android/app/src/main/res/**/*.xml
+!android/app/src/main/AndroidManifest.xml
+frames/
+*.json
+!android/app/src/main/assets/**/*.json
+!web/package.json
+!web/tsconfig.json
+
+# Secrets
+*.key
+*.pem
+*.p12
+*_token*
+*_prefs*
