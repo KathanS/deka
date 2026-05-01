@@ -63,27 +63,37 @@ Blinkit · Zomato · Swiggy · Uber · Ola · Rapido · Zepto · Amazon · Flipk
 
 ## Setup
 
-### 1. Get an API key
+### 1. Environment Setup (macOS)
+If you are building without Android Studio, configure your environment tools:
 
-You need an OpenAI or Anthropic API key:
-- OpenAI: [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
-- Anthropic: [console.anthropic.com](https://console.anthropic.com)
+*   **Install SDK tools:** `brew install --cask android-commandlinetools`[cite: 1]
+*   **Update shell profile:** Add these lines to your `~/.zshrc`:[cite: 1]
+    ```bash
+    export ANDROID_HOME=$HOME/Library/Android/sdk
+    export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
+    ```
+*   **Refresh shell:** `source ~/.zshrc`[cite: 1]
+*   **Accept licenses:** `sdkmanager --licenses`[cite: 1]
+
+---
 
 ### 2. Build the APK
+Ensure the Gradle wrapper has the correct permissions and the project knows where the SDK is located:
 
-```bash
-cd android
-./gradlew assembleDebug
-# APK at: app/build/outputs/apk/debug/app-debug.apk
-```
+*   **Navigate to directory:** `cd android`[cite: 1]
+*   **Grant execution permissions:** `chmod +x gradlew`[cite: 1]
+*   **Define SDK path:** `echo "sdk.dir=$HOME/Library/Android/sdk" > local.properties`[cite: 1]
+*   **Execute build:** `./gradlew assembleDebug`[cite: 1]
 
-### 3. Install & configure
+> The generated APK will be located at: `app/build/outputs/apk/debug/app-debug.apk`[cite: 1]
 
-1. Install the APK on your Android phone
-2. Open Deka → enter your API key
-3. Enable **Settings → Accessibility → Deka**
-4. Start texting commands!
+---
 
+### 3. Install & Configure
+*   **Install:** Transfer the APK to your phone and install it.[cite: 1]
+*   **API Key:** Open Deka and enter your OpenAI or Anthropic API key.[cite: 1]
+*   **Permissions:** Enable **Settings → Accessibility → Deka** on your phone.[cite: 1]
+*   **Run:** Start sending text commands to the agent.[cite: 1]
 ## Tech Stack
 
 - **Android**: Kotlin, Jetpack Compose, Material 3
